@@ -1,0 +1,18 @@
+A brief description of how you populated the database
+• I have populated the data on my own depending on the queries which
+ever I need.
+• I have designed the database in such a realistic way that resembles the
+real scenario which is presently being used by the big merchanants and
+gold smith business.
+• I have randomly generated the customer names, address, showroom
+names, manufacturer names using the https://www.mockaroo.com/
+where it has a feature of generating random set of values in bulk which is
+fake and irrelevant to any means of data.
+• Mockaroo has a great data mocking libraries available for almost every
+language and platform. But not everyone is a programmer or has time to
+learn a new framework. Mockaroo allows you to quickly and easily to
+download large amounts of randomly generated test data based on your
+own specs which you can then load directly into your test environment
+using SQL or CSV formats. No programming is required.
+• Using the above tool I have generated the data for six tables i.e Customer,
+Orders,Manufacturers, Showroom, Company, Billamount.
