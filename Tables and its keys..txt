@@ -1,0 +1,18 @@
+TABLES & INFORMATION ABOUT ALL THE KEYS INCLUDING PRIMARY KEYS AND FOREIGN KEYS.
+Customer it consists of four attributes.
+(Customer_id,Customer_name,Phone,Address)
+Customer_id is the foreign key to Orders table.
+
+ORDERS it has five attributes.
+(Order_id,Order_name,Showroom_id,Manu_id,Customer_id)
+MANUFACTURE it has four attributes.
+(Manu_id,Manu_phone,Manu_address,Manu_name)
+SHOWROOM it has four attributes
+(Showroom_id,Showroom_address,Showroom_name,Company_id)
+Showroom_id is the foreign key to Orders table.
+BILLAMOUNT it has seven attributes
+(Bill_id,Order_id,Tax_amount,Crafting_charges,Gold_price,Silver_price,Total_amount)
+Bill_id is the foreign key to Order table.
+COMPANY it has two attributes
+(Company_id,Company_name)
+Company_id is the foreign key to Showroom table
