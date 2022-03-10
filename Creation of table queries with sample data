@@ -1,0 +1,55 @@
+CREATE TABLE customer (
+customer_id int NOT NULL,
+customer_name varchar(255) NOT NULL,
+address varchar(255),
+phone CHAR(10),
+PRIMARY KEY (customer_id));
+INSERT INTO customer (customer_id, customer_name, address, phone)
+VALUES ('1', 'Erichsen', 'Portland', '7896541254');
+===================================================================================================
+CREATE TABLE showroom (
+showroom_id int NOT NULL,
+showroom_name varchar(255) NOT NULL,
+address varchar(255),
+PRIMARY KEY (showroom_id));
+INSERT INTO showroom (showroom_id, showroom_name, address)
+VALUES ('1', 'GRTGOLD', 'INDIA');
+===================================================================================================
+CREATE TABLE manufacturer (
+manu_id int NOT NULL,
+manu_name varchar(255) NOT NULL,
+manu_address varchar(255),
+manu_phone CHAR(10),
+PRIMARY KEY (manu_id));
+INSERT INTO manufacturer (manu_id, manu_name, manu_address, manu_phone)
+VALUES ('1', 'AA_FACTORIES', 'INDIA', 9874568485);
+========================================
+CREATE TABLE orders (
+order_id int NOT NULL,
+customer_id int NOT NULL,
+manu_id int NOT NULL,
+showroom_id int NOT NULL,
+order_name varchar(255),
+company_id int,
+PRIMARY KEY (order_id),
+FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
+FOREIGN KEY (manu_id) REFERENCES manufacturer(manu_id),
+FOREIGN KEY (showroom_id) REFERENCES showroom(showroom_id));
+INSERT INTO orders (order_id, customer_id, manu_id, showroom_id, order_name)
+VALUES (1, 1, 1, 1, "Gold_Chain");
+========================================
+
+CREATE TABLE billamount (
+bill_id int NOT NULL,
+order_id int NOT NULL,
+tax_amount int,
+crafting_charges int,
+gold_price int,
+silver_price int,
+total_bill int,
+PRIMARY KEY (bill_id),
+FOREIGN KEY (order_id) REFERENCES orders(order_id));
+==
+INSERT INTO billamount (bill_id, order_id, tax_amount, crafting_charges, gold_price, silver_price,
+total_bill)
+VALUES (1, 1, 250, 150, 500, 400, 1300);
